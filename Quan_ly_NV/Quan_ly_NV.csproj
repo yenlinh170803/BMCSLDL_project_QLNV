@@ -59,11 +59,17 @@
     <Compile Include="frm_crud.Designer.cs">
       <DependentUpon>frm_crud.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_danhsach.cs">
+    <None Include="frm_danhsach.cs">
       <SubType>Form</SubType>
-    </Compile>
+    </None>
     <Compile Include="frm_danhsach.Designer.cs">
       <DependentUpon>frm_danhsach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_nhansu .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_nhansu .Designer.cs">
+      <DependentUpon>frm_nhansu .cs</DependentUpon>
     </Compile>
     <Compile Include="frm_employee.cs">
       <SubType>Form</SubType>
@@ -113,6 +119,12 @@
     <Compile Include="frm_thongtinphongban.Designer.cs">
       <DependentUpon>frm_thongtinphongban.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_truongdeann.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_truongdeann.Designer.cs">
+      <DependentUpon>frm_truongdeann.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frm_admin.resx">
@@ -123,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_danhsach.resx">
       <DependentUpon>frm_danhsach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_nhansu .resx">
+      <DependentUpon>frm_nhansu .cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_employee.resx">
       <DependentUpon>frm_employee.cs</DependentUpon>
@@ -147,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_thongtinphongban.resx">
       <DependentUpon>frm_thongtinphongban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_truongdeann.resx">
+      <DependentUpon>frm_truongdeann.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
