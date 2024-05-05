@@ -22,6 +22,9 @@ namespace Quan_ly_NV
 
         }
 
+        private void btn_remove_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
