@@ -13,6 +13,7 @@ namespace Quan_ly_NV
     public partial class frm_quanlytructiep : Form
     {
         private Form activeForm;
+        private bool formOpened = false;
         public frm_quanlytructiep()
         {
             InitializeComponent();
@@ -23,19 +24,31 @@ namespace Quan_ly_NV
         }
         private void OpenChildForm(Form childForm, object btnSender)
         {
-            if (activeForm != null)
+            if (activeForm != null && activeForm.GetType() != childForm.GetType())
             {
-                ActiveForm.Close();
+                activeForm.Close(); // Đóng form con hiện tại
+                formOpened = false; // Đặt lại giá trị biến formOpened
             }
             ActivateButton(btnSender);
             activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
+
+            // Loại bỏ form con hiện tại khỏi panel_show
+            foreach (Control control in panel_show.Controls)
+            {
+                if (control.GetType() == childForm.GetType())
+                {
+                    panel_show.Controls.Remove(control);
+                    break;
+                }
+            }
+
             this.panel_show.Controls.Add(childForm);
             this.panel_show.Tag = childForm;
             childForm.Show();
-
+            formOpened = true; // Đặt giá trị formOpened là true khi form đã được mở
         }
 
         private void btn_thongtinnhanvien_Click(object sender, EventArgs e)

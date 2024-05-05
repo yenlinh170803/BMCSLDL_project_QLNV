@@ -16,7 +16,7 @@ namespace Quan_ly_NV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_truongphong());
+            Application.Run(new frm_login());
         }
     }
 }
