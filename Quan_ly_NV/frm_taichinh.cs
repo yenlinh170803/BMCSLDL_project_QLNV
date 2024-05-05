@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Quan_ly_NV
 {
-    public partial class frm_employee : Form
+    public partial class frm_taichinh : Form
     {
         private Form activeForm;
-        public frm_employee()
+        public frm_taichinh()
         {
             InitializeComponent();
         }
@@ -42,7 +42,6 @@ namespace Quan_ly_NV
         {
             lbl_tiltle.Text = btn_thongtinnhanvien.Text;
             OpenChildForm(new frm_thongtinnhanvien(), sender);
-
         }
 
         private void btn_thongtinphongban_Click(object sender, EventArgs e)
@@ -53,6 +52,7 @@ namespace Quan_ly_NV
 
         private void btn_thongtindean_Click(object sender, EventArgs e)
         {
+
             lbl_tiltle.Text = btn_thongtindean.Text;
             OpenChildForm(new frm_thongtindean(), sender);
         }
@@ -60,7 +60,13 @@ namespace Quan_ly_NV
         private void btn_thongtinphancong_Click(object sender, EventArgs e)
         {
             lbl_tiltle.Text = btn_thongtinphancong.Text;
-            OpenChildForm(new frm_thongtinphancong(),sender);
+            OpenChildForm(new frm_thongtinphancong(), sender);
+        }
+
+        private void btn_capnhatluongphucap_Click(object sender, EventArgs e)
+        {
+            lbl_tiltle.Text=btn_capnhatluongphucap.Text;
+            OpenChildForm(new frm_capnhattaichinh(), sender);
         }
     }
 }

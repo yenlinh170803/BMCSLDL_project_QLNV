@@ -53,11 +53,23 @@
     <Compile Include="frm_admin.Designer.cs">
       <DependentUpon>frm_admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_capnhattaichinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_capnhattaichinh.Designer.cs">
+      <DependentUpon>frm_capnhattaichinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_crud_dean.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_crud_dean.Designer.cs">
       <DependentUpon>frm_crud_dean.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_crud_phancong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_crud_phancong.Designer.cs">
+      <DependentUpon>frm_crud_phancong.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_crud_taikhoan.cs">
       <SubType>Form</SubType>
@@ -113,6 +125,12 @@
     <Compile Include="frm_quyen.Designer.cs">
       <DependentUpon>frm_quyen.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_taichinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_taichinh.Designer.cs">
+      <DependentUpon>frm_taichinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_thongtindean.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,13 +173,25 @@
     <Compile Include="frm_crud_nhanvien.Designer.cs">
       <DependentUpon>frm_crud_nhanvien.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_truongphong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_truongphong.Designer.cs">
+      <DependentUpon>frm_truongphong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frm_admin.resx">
       <DependentUpon>frm_admin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_capnhattaichinh.resx">
+      <DependentUpon>frm_capnhattaichinh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_crud_dean.resx">
       <DependentUpon>frm_crud_dean.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_crud_phancong.resx">
+      <DependentUpon>frm_crud_phancong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_crud_phongban.resx">
       <DependentUpon>frm_crud_phongban.cs</DependentUpon>
@@ -187,6 +217,9 @@
     <EmbeddedResource Include="frm_quyen.resx">
       <DependentUpon>frm_quyen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_taichinh.resx">
+      <DependentUpon>frm_taichinh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_thongtindean.resx">
       <DependentUpon>frm_thongtindean.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_crud_nhanvien.resx">
       <DependentUpon>frm_crud_nhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_truongphong.resx">
+      <DependentUpon>frm_truongphong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
