@@ -1,6 +1,6 @@
 ﻿namespace Quan_ly_NV
 {
-    partial class frm_crud
+    partial class frm_crud_taikhoan
     {
         /// <summary>
         /// Required designer variable.

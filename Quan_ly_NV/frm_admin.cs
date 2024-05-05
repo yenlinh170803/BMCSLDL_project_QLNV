@@ -59,7 +59,7 @@ namespace Quan_ly_NV
         private void btn_crud_Click(object sender, EventArgs e)
         {
             lbl_tiltle.Text = btn_crud.Text;
-            OpenChildForm(new frm_crud(), sender);
+            OpenChildForm(new frm_crud_taikhoan(), sender);
         }
 
         private void btn_phanquyen_Click(object sender, EventArgs e)

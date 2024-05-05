@@ -53,11 +53,17 @@
     <Compile Include="frm_admin.Designer.cs">
       <DependentUpon>frm_admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_crud.cs">
+    <Compile Include="frm_crud_taikhoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_crud.Designer.cs">
-      <DependentUpon>frm_crud.cs</DependentUpon>
+    <Compile Include="frm_crud_taikhoan.Designer.cs">
+      <DependentUpon>frm_crud_taikhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_crud_phongban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_crud_phongban.Designer.cs">
+      <DependentUpon>frm_crud_phongban.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_danhsach.cs">
       <SubType>Form</SubType>
@@ -125,13 +131,22 @@
     <Compile Include="frm_truongdeann.Designer.cs">
       <DependentUpon>frm_truongdeann.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_crud_nhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_crud_nhanvien.Designer.cs">
+      <DependentUpon>frm_crud_nhanvien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frm_admin.resx">
       <DependentUpon>frm_admin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_crud.resx">
-      <DependentUpon>frm_crud.cs</DependentUpon>
+    <EmbeddedResource Include="frm_crud_phongban.resx">
+      <DependentUpon>frm_crud_phongban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_crud_taikhoan.resx">
+      <DependentUpon>frm_crud_taikhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_danhsach.resx">
       <DependentUpon>frm_danhsach.cs</DependentUpon>
@@ -165,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_truongdeann.resx">
       <DependentUpon>frm_truongdeann.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_crud_nhanvien.resx">
+      <DependentUpon>frm_crud_nhanvien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

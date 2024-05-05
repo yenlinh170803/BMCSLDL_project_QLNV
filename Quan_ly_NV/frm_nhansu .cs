@@ -63,5 +63,17 @@ namespace Quan_ly_NV
             btn_home.Text = btn_thongtinnhanvien.Text;
             OpenChildForm(new frm_thongtinnhanvien(), sender);
         }
+
+        private void btn_crud_phongban_Click(object sender, EventArgs e)
+        {
+            btn_home.Text = btn_crud_phongban.Text;
+            OpenChildForm(new frm_crud_phongban(), sender);
+        }
+
+        private void btn_crud_nhanvien_Click(object sender, EventArgs e)
+        {
+            btn_home.Text = btn_crud_nhanvien.Text;
+            OpenChildForm(new frm_crud_nhanvien(), sender);
+        }
     }
 }

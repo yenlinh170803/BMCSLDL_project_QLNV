@@ -10,21 +10,13 @@ using System.Windows.Forms;
 
 namespace Quan_ly_NV
 {
-    public partial class frm_crud : Form
+    public partial class frm_crud_phongban : Form
     {
-        public frm_crud()
+        public frm_crud_phongban()
         {
             InitializeComponent();
         }
 
-        private void frm_crud_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_remove_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

@@ -34,6 +34,8 @@
             this.panel_show = new System.Windows.Forms.Panel();
             this.pnl_menu = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_crud_phongban = new System.Windows.Forms.Button();
+            this.btn_crud_nhanvien = new System.Windows.Forms.Button();
             this.btn_thongtinphancong = new System.Windows.Forms.Button();
             this.btn_thongtindean = new System.Windows.Forms.Button();
             this.btn_thongtinphongban = new System.Windows.Forms.Button();
@@ -73,7 +75,7 @@
             // 
             this.btn_home.AutoSize = true;
             this.btn_home.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_home.Location = new System.Drawing.Point(378, 30);
+            this.btn_home.Location = new System.Drawing.Point(362, 30);
             this.btn_home.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.btn_home.Name = "btn_home";
             this.btn_home.Size = new System.Drawing.Size(62, 24);
@@ -104,6 +106,8 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(194)))));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.btn_crud_phongban);
+            this.panel2.Controls.Add(this.btn_crud_nhanvien);
             this.panel2.Controls.Add(this.btn_thongtinphancong);
             this.panel2.Controls.Add(this.btn_thongtindean);
             this.panel2.Controls.Add(this.btn_thongtinphongban);
@@ -113,6 +117,38 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(284, 485);
             this.panel2.TabIndex = 1;
+            // 
+            // btn_crud_phongban
+            // 
+            this.btn_crud_phongban.AutoEllipsis = true;
+            this.btn_crud_phongban.BackgroundImage = global::Quan_ly_NV.Properties.Resources.backgroud;
+            this.btn_crud_phongban.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_crud_phongban.FlatAppearance.BorderSize = 0;
+            this.btn_crud_phongban.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_crud_phongban.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_crud_phongban.Location = new System.Drawing.Point(-4, 313);
+            this.btn_crud_phongban.Name = "btn_crud_phongban";
+            this.btn_crud_phongban.Size = new System.Drawing.Size(284, 80);
+            this.btn_crud_phongban.TabIndex = 10;
+            this.btn_crud_phongban.Text = "Thêm, cập nhật phòng ban";
+            this.btn_crud_phongban.UseVisualStyleBackColor = true;
+            this.btn_crud_phongban.Click += new System.EventHandler(this.btn_crud_phongban_Click);
+            // 
+            // btn_crud_nhanvien
+            // 
+            this.btn_crud_nhanvien.AutoEllipsis = true;
+            this.btn_crud_nhanvien.BackgroundImage = global::Quan_ly_NV.Properties.Resources.backgroud;
+            this.btn_crud_nhanvien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_crud_nhanvien.FlatAppearance.BorderSize = 0;
+            this.btn_crud_nhanvien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_crud_nhanvien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_crud_nhanvien.Location = new System.Drawing.Point(-1, 394);
+            this.btn_crud_nhanvien.Name = "btn_crud_nhanvien";
+            this.btn_crud_nhanvien.Size = new System.Drawing.Size(284, 80);
+            this.btn_crud_nhanvien.TabIndex = 9;
+            this.btn_crud_nhanvien.Text = "Thêm, cập nhật nhân viên";
+            this.btn_crud_nhanvien.UseVisualStyleBackColor = true;
+            this.btn_crud_nhanvien.Click += new System.EventHandler(this.btn_crud_nhanvien_Click);
             // 
             // btn_thongtinphancong
             // 
@@ -223,5 +259,7 @@
         private System.Windows.Forms.Button btn_thongtindean;
         private System.Windows.Forms.Button btn_thongtinphongban;
         private System.Windows.Forms.Button btn_thongtinnhanvien;
+        private System.Windows.Forms.Button btn_crud_phongban;
+        private System.Windows.Forms.Button btn_crud_nhanvien;
     }
 }
