@@ -30,6 +30,10 @@
         {
             this.btn_loaddata__xtt = new System.Windows.Forms.Button();
             this.dtg_thongtindean = new System.Windows.Forms.DataGridView();
+            this.clb_mada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clb_tende = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clb_ngaybd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clb_phong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_thongtindean)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,10 +54,36 @@
             // 
             this.dtg_thongtindean.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dtg_thongtindean.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtg_thongtindean.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clb_mada,
+            this.clb_tende,
+            this.clb_ngaybd,
+            this.clb_phong});
+            this.dtg_thongtindean.GridColor = System.Drawing.SystemColors.Window;
             this.dtg_thongtindean.Location = new System.Drawing.Point(0, 95);
             this.dtg_thongtindean.Name = "dtg_thongtindean";
             this.dtg_thongtindean.Size = new System.Drawing.Size(806, 355);
             this.dtg_thongtindean.TabIndex = 4;
+            // 
+            // clb_mada
+            // 
+            this.clb_mada.HeaderText = "MADA";
+            this.clb_mada.Name = "clb_mada";
+            // 
+            // clb_tende
+            // 
+            this.clb_tende.HeaderText = "TENDA";
+            this.clb_tende.Name = "clb_tende";
+            // 
+            // clb_ngaybd
+            // 
+            this.clb_ngaybd.HeaderText = "NGAYBD";
+            this.clb_ngaybd.Name = "clb_ngaybd";
+            // 
+            // clb_phong
+            // 
+            this.clb_phong.HeaderText = "PHONG";
+            this.clb_phong.Name = "clb_phong";
             // 
             // frm_thongtindean
             // 
@@ -73,5 +103,9 @@
 
         private System.Windows.Forms.Button btn_loaddata__xtt;
         private System.Windows.Forms.DataGridView dtg_thongtindean;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clb_mada;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clb_tende;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clb_ngaybd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clb_phong;
     }
 }

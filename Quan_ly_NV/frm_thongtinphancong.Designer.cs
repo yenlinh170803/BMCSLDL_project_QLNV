@@ -30,6 +30,9 @@
         {
             this.dtg_thongtinphancong = new System.Windows.Forms.DataGridView();
             this.btn_loaddata__xtt = new System.Windows.Forms.Button();
+            this.clb_manv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clb_mada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clb_thoigian = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_thongtinphancong)).BeginInit();
             this.SuspendLayout();
             // 
@@ -37,6 +40,10 @@
             // 
             this.dtg_thongtinphancong.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dtg_thongtinphancong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtg_thongtinphancong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clb_manv,
+            this.clb_mada,
+            this.clb_thoigian});
             this.dtg_thongtinphancong.Location = new System.Drawing.Point(-3, 93);
             this.dtg_thongtinphancong.Name = "dtg_thongtinphancong";
             this.dtg_thongtinphancong.Size = new System.Drawing.Size(806, 355);
@@ -54,6 +61,21 @@
             this.btn_loaddata__xtt.TabIndex = 5;
             this.btn_loaddata__xtt.Text = "Load data";
             this.btn_loaddata__xtt.UseVisualStyleBackColor = true;
+            // 
+            // clb_manv
+            // 
+            this.clb_manv.HeaderText = "MANV";
+            this.clb_manv.Name = "clb_manv";
+            // 
+            // clb_mada
+            // 
+            this.clb_mada.HeaderText = "MADA";
+            this.clb_mada.Name = "clb_mada";
+            // 
+            // clb_thoigian
+            // 
+            this.clb_thoigian.HeaderText = "THOIGIAN";
+            this.clb_thoigian.Name = "clb_thoigian";
             // 
             // frm_thongtinphancong
             // 
@@ -73,5 +95,8 @@
 
         private System.Windows.Forms.DataGridView dtg_thongtinphancong;
         private System.Windows.Forms.Button btn_loaddata__xtt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clb_manv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clb_mada;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clb_thoigian;
     }
 }
