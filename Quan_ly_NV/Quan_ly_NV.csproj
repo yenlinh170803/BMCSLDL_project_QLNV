@@ -53,6 +53,12 @@
     <Compile Include="frm_admin.Designer.cs">
       <DependentUpon>frm_admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_crud_dean.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_crud_dean.Designer.cs">
+      <DependentUpon>frm_crud_dean.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_crud_taikhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,12 @@
     <Compile Include="frm_thongtinphongban.Designer.cs">
       <DependentUpon>frm_thongtinphongban.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_truongdean.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_truongdean.Designer.cs">
+      <DependentUpon>frm_truongdean.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_truongdeann.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +153,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frm_admin.resx">
       <DependentUpon>frm_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_crud_dean.resx">
+      <DependentUpon>frm_crud_dean.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_crud_phongban.resx">
       <DependentUpon>frm_crud_phongban.cs</DependentUpon>
@@ -177,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_thongtinphongban.resx">
       <DependentUpon>frm_thongtinphongban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_truongdean.resx">
+      <DependentUpon>frm_truongdean.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_truongdeann.resx">
       <DependentUpon>frm_truongdeann.cs</DependentUpon>
