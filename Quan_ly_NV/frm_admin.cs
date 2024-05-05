@@ -47,7 +47,7 @@ namespace Quan_ly_NV
         private void btn_danhsach_Click(object sender, EventArgs e)
         {
             lbl_tiltle.Text=btn_danhsach.Text;
-            OpenChildForm(new frm_danhsach(),sender);
+            OpenChildForm(new frm_danhsach(), sender);
         }
 
         private void btn_quyen_Click(object sender, EventArgs e)

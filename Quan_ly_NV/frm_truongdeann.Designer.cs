@@ -44,11 +44,12 @@
             this.Name_of_project,
             this.Start_day,
             this.End_day});
-            this.dataGridView1.Location = new System.Drawing.Point(5, 9);
+            this.dataGridView1.Location = new System.Drawing.Point(4, 7);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(793, 435);
+            this.dataGridView1.Size = new System.Drawing.Size(595, 353);
             this.dataGridView1.TabIndex = 0;
             // 
             // Name_of_leader
@@ -81,10 +82,11 @@
             // 
             // frm_truongdeann
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(552, 259);
+            this.ClientSize = new System.Drawing.Size(599, 349);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frm_truongdeann";
             this.Text = "frm_truongdean";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

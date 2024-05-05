@@ -59,9 +59,9 @@
     <Compile Include="frm_crud.Designer.cs">
       <DependentUpon>frm_crud.cs</DependentUpon>
     </Compile>
-    <None Include="frm_danhsach.cs">
+    <Compile Include="frm_danhsach.cs">
       <SubType>Form</SubType>
-    </None>
+    </Compile>
     <Compile Include="frm_danhsach.Designer.cs">
       <DependentUpon>frm_danhsach.cs</DependentUpon>
     </Compile>

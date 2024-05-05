@@ -38,31 +38,30 @@ namespace Quan_ly_NV
 
         }
 
+
+        private void btn_thongtinphongban_Click(object sender, EventArgs e)
+        {
+            btn_home.Text = btn_thongtinphongban.Text;
+            OpenChildForm(new frm_thongtinphongban(), sender);
+
+        }
+
+        private void btn_thongtindean_Click(object sender, EventArgs e)
+        {
+            btn_home.Text = btn_thongtindean.Text;
+            OpenChildForm(new frm_thongtindean(), sender);
+        }
+
+        private void btn_thongtinphancong_Click(object sender, EventArgs e)
+        {
+            btn_home.Text = btn_thongtinphancong.Text;
+            OpenChildForm(new frm_thongtinphancong(), sender);
+        }
+
         private void btn_thongtinnhanvien_Click(object sender, EventArgs e)
         {
-            Home.Text = btn_thongtinnhansu.Text;
+            btn_home.Text = btn_thongtinnhanvien.Text;
             OpenChildForm(new frm_thongtinnhanvien(), sender);
-
-        }
-
-        private void frm_nhansu_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void pnl_name_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

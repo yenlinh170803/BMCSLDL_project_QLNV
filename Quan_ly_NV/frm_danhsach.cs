@@ -16,7 +16,5 @@ namespace Quan_ly_NV
         {
             InitializeComponent();
         }
-
-        
     }
 }

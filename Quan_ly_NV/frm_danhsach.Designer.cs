@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.dtg_danhsach = new System.Windows.Forms.DataGridView();
-            this.clb_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clb_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clb_username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clb_userid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clb_created = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_danhsach)).BeginInit();
             this.SuspendLayout();
@@ -38,11 +38,11 @@
             // dtg_danhsach
             // 
             this.dtg_danhsach.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dtg_danhsach.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtg_danhsach.CausesValidation = false;
             this.dtg_danhsach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtg_danhsach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clb_name,
-            this.clb_id,
+            this.clb_username,
+            this.clb_userid,
             this.clb_created});
             this.dtg_danhsach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtg_danhsach.Location = new System.Drawing.Point(0, 0);
@@ -50,15 +50,15 @@
             this.dtg_danhsach.Size = new System.Drawing.Size(800, 450);
             this.dtg_danhsach.TabIndex = 0;
             // 
-            // clb_name
+            // clb_username
             // 
-            this.clb_name.HeaderText = "USERNAME";
-            this.clb_name.Name = "clb_name";
+            this.clb_username.HeaderText = "USERNAME";
+            this.clb_username.Name = "clb_username";
             // 
-            // clb_id
+            // clb_userid
             // 
-            this.clb_id.HeaderText = "USERID";
-            this.clb_id.Name = "clb_id";
+            this.clb_userid.HeaderText = "USERID";
+            this.clb_userid.Name = "clb_userid";
             // 
             // clb_created
             // 
@@ -81,8 +81,8 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dtg_danhsach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clb_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clb_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clb_username;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clb_userid;
         private System.Windows.Forms.DataGridViewTextBoxColumn clb_created;
     }
 }

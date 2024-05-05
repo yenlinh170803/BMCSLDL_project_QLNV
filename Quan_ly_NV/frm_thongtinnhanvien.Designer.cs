@@ -30,7 +30,7 @@
         {
             this.tb_thongtinnhanvien = new System.Windows.Forms.TabControl();
             this.tb_xemthongtin = new System.Windows.Forms.TabPage();
-            this.tb_capnhatthongtin = new System.Windows.Forms.TabPage();
+            this.btn_loaddata__xtt = new System.Windows.Forms.Button();
             this.dtg_xemthongtin = new System.Windows.Forms.DataGridView();
             this.clb_manv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clb_tennv = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,18 +43,18 @@
             this.clb_vaitro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clb_maql = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clb_phg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_loaddata__xtt = new System.Windows.Forms.Button();
-            this.lbl_ngaysinh = new System.Windows.Forms.Label();
-            this.dtP_ngaysinh = new System.Windows.Forms.DateTimePicker();
-            this.lbl_diachi = new System.Windows.Forms.Label();
-            this.txt_diachi = new System.Windows.Forms.TextBox();
+            this.tb_capnhatthongtin = new System.Windows.Forms.TabPage();
+            this.btn_capnhat = new System.Windows.Forms.Button();
             this.txt_sdt = new System.Windows.Forms.TextBox();
             this.lbl_sdt = new System.Windows.Forms.Label();
-            this.btn_capnhat = new System.Windows.Forms.Button();
+            this.txt_diachi = new System.Windows.Forms.TextBox();
+            this.lbl_diachi = new System.Windows.Forms.Label();
+            this.dtP_ngaysinh = new System.Windows.Forms.DateTimePicker();
+            this.lbl_ngaysinh = new System.Windows.Forms.Label();
             this.tb_thongtinnhanvien.SuspendLayout();
             this.tb_xemthongtin.SuspendLayout();
-            this.tb_capnhatthongtin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_xemthongtin)).BeginInit();
+            this.tb_capnhatthongtin.SuspendLayout();
             this.SuspendLayout();
             // 
             // tb_thongtinnhanvien
@@ -80,22 +80,18 @@
             this.tb_xemthongtin.Text = "Xem thông tin";
             this.tb_xemthongtin.UseVisualStyleBackColor = true;
             // 
-            // tb_capnhatthongtin
+            // btn_loaddata__xtt
             // 
-            this.tb_capnhatthongtin.Controls.Add(this.btn_capnhat);
-            this.tb_capnhatthongtin.Controls.Add(this.txt_sdt);
-            this.tb_capnhatthongtin.Controls.Add(this.lbl_sdt);
-            this.tb_capnhatthongtin.Controls.Add(this.txt_diachi);
-            this.tb_capnhatthongtin.Controls.Add(this.lbl_diachi);
-            this.tb_capnhatthongtin.Controls.Add(this.dtP_ngaysinh);
-            this.tb_capnhatthongtin.Controls.Add(this.lbl_ngaysinh);
-            this.tb_capnhatthongtin.Location = new System.Drawing.Point(4, 22);
-            this.tb_capnhatthongtin.Name = "tb_capnhatthongtin";
-            this.tb_capnhatthongtin.Padding = new System.Windows.Forms.Padding(3);
-            this.tb_capnhatthongtin.Size = new System.Drawing.Size(792, 424);
-            this.tb_capnhatthongtin.TabIndex = 1;
-            this.tb_capnhatthongtin.Text = "Cập nhật thông tin";
-            this.tb_capnhatthongtin.UseVisualStyleBackColor = true;
+            this.btn_loaddata__xtt.BackgroundImage = global::Quan_ly_NV.Properties.Resources.backgroud;
+            this.btn_loaddata__xtt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_loaddata__xtt.FlatAppearance.BorderSize = 0;
+            this.btn_loaddata__xtt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_loaddata__xtt.Location = new System.Drawing.Point(592, 33);
+            this.btn_loaddata__xtt.Name = "btn_loaddata__xtt";
+            this.btn_loaddata__xtt.Size = new System.Drawing.Size(116, 25);
+            this.btn_loaddata__xtt.TabIndex = 1;
+            this.btn_loaddata__xtt.Text = "Load data";
+            this.btn_loaddata__xtt.UseVisualStyleBackColor = true;
             // 
             // dtg_xemthongtin
             // 
@@ -173,52 +169,35 @@
             this.clb_phg.HeaderText = "PHG";
             this.clb_phg.Name = "clb_phg";
             // 
-            // btn_loaddata__xtt
+            // tb_capnhatthongtin
             // 
-            this.btn_loaddata__xtt.BackgroundImage = global::Quan_ly_NV.Properties.Resources.backgroud;
-            this.btn_loaddata__xtt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_loaddata__xtt.FlatAppearance.BorderSize = 0;
-            this.btn_loaddata__xtt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_loaddata__xtt.Location = new System.Drawing.Point(592, 33);
-            this.btn_loaddata__xtt.Name = "btn_loaddata__xtt";
-            this.btn_loaddata__xtt.Size = new System.Drawing.Size(116, 25);
-            this.btn_loaddata__xtt.TabIndex = 1;
-            this.btn_loaddata__xtt.Text = "Load data";
-            this.btn_loaddata__xtt.UseVisualStyleBackColor = true;
+            this.tb_capnhatthongtin.Controls.Add(this.btn_capnhat);
+            this.tb_capnhatthongtin.Controls.Add(this.txt_sdt);
+            this.tb_capnhatthongtin.Controls.Add(this.lbl_sdt);
+            this.tb_capnhatthongtin.Controls.Add(this.txt_diachi);
+            this.tb_capnhatthongtin.Controls.Add(this.lbl_diachi);
+            this.tb_capnhatthongtin.Controls.Add(this.dtP_ngaysinh);
+            this.tb_capnhatthongtin.Controls.Add(this.lbl_ngaysinh);
+            this.tb_capnhatthongtin.Location = new System.Drawing.Point(4, 22);
+            this.tb_capnhatthongtin.Name = "tb_capnhatthongtin";
+            this.tb_capnhatthongtin.Padding = new System.Windows.Forms.Padding(3);
+            this.tb_capnhatthongtin.Size = new System.Drawing.Size(792, 424);
+            this.tb_capnhatthongtin.TabIndex = 1;
+            this.tb_capnhatthongtin.Text = "Cập nhật thông tin";
+            this.tb_capnhatthongtin.UseVisualStyleBackColor = true;
             // 
-            // lbl_ngaysinh
+            // btn_capnhat
             // 
-            this.lbl_ngaysinh.AutoSize = true;
-            this.lbl_ngaysinh.Location = new System.Drawing.Point(161, 87);
-            this.lbl_ngaysinh.Name = "lbl_ngaysinh";
-            this.lbl_ngaysinh.Size = new System.Drawing.Size(54, 13);
-            this.lbl_ngaysinh.TabIndex = 0;
-            this.lbl_ngaysinh.Text = "Ngày sinh";
-            // 
-            // dtP_ngaysinh
-            // 
-            this.dtP_ngaysinh.Location = new System.Drawing.Point(270, 82);
-            this.dtP_ngaysinh.Name = "dtP_ngaysinh";
-            this.dtP_ngaysinh.Size = new System.Drawing.Size(243, 20);
-            this.dtP_ngaysinh.TabIndex = 1;
-            this.dtP_ngaysinh.Value = new System.DateTime(2024, 4, 30, 0, 0, 0, 0);
-            // 
-            // lbl_diachi
-            // 
-            this.lbl_diachi.AutoSize = true;
-            this.lbl_diachi.Location = new System.Drawing.Point(161, 167);
-            this.lbl_diachi.Name = "lbl_diachi";
-            this.lbl_diachi.Size = new System.Drawing.Size(40, 13);
-            this.lbl_diachi.TabIndex = 2;
-            this.lbl_diachi.Text = "Địa chỉ";
-            // 
-            // txt_diachi
-            // 
-            this.txt_diachi.Location = new System.Drawing.Point(270, 149);
-            this.txt_diachi.Multiline = true;
-            this.txt_diachi.Name = "txt_diachi";
-            this.txt_diachi.Size = new System.Drawing.Size(243, 60);
-            this.txt_diachi.TabIndex = 3;
+            this.btn_capnhat.BackgroundImage = global::Quan_ly_NV.Properties.Resources.backgroud;
+            this.btn_capnhat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_capnhat.FlatAppearance.BorderSize = 0;
+            this.btn_capnhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_capnhat.Location = new System.Drawing.Point(314, 339);
+            this.btn_capnhat.Name = "btn_capnhat";
+            this.btn_capnhat.Size = new System.Drawing.Size(116, 25);
+            this.btn_capnhat.TabIndex = 6;
+            this.btn_capnhat.Text = "Cập nhật ";
+            this.btn_capnhat.UseVisualStyleBackColor = true;
             // 
             // txt_sdt
             // 
@@ -237,18 +216,39 @@
             this.lbl_sdt.TabIndex = 4;
             this.lbl_sdt.Text = "Số điện thoại";
             // 
-            // btn_capnhat
+            // txt_diachi
             // 
-            this.btn_capnhat.BackgroundImage = global::Quan_ly_NV.Properties.Resources.backgroud;
-            this.btn_capnhat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_capnhat.FlatAppearance.BorderSize = 0;
-            this.btn_capnhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_capnhat.Location = new System.Drawing.Point(314, 339);
-            this.btn_capnhat.Name = "btn_capnhat";
-            this.btn_capnhat.Size = new System.Drawing.Size(116, 25);
-            this.btn_capnhat.TabIndex = 6;
-            this.btn_capnhat.Text = "Cập nhật ";
-            this.btn_capnhat.UseVisualStyleBackColor = true;
+            this.txt_diachi.Location = new System.Drawing.Point(270, 149);
+            this.txt_diachi.Multiline = true;
+            this.txt_diachi.Name = "txt_diachi";
+            this.txt_diachi.Size = new System.Drawing.Size(243, 60);
+            this.txt_diachi.TabIndex = 3;
+            // 
+            // lbl_diachi
+            // 
+            this.lbl_diachi.AutoSize = true;
+            this.lbl_diachi.Location = new System.Drawing.Point(161, 167);
+            this.lbl_diachi.Name = "lbl_diachi";
+            this.lbl_diachi.Size = new System.Drawing.Size(40, 13);
+            this.lbl_diachi.TabIndex = 2;
+            this.lbl_diachi.Text = "Địa chỉ";
+            // 
+            // dtP_ngaysinh
+            // 
+            this.dtP_ngaysinh.Location = new System.Drawing.Point(270, 82);
+            this.dtP_ngaysinh.Name = "dtP_ngaysinh";
+            this.dtP_ngaysinh.Size = new System.Drawing.Size(243, 20);
+            this.dtP_ngaysinh.TabIndex = 1;
+            this.dtP_ngaysinh.Value = new System.DateTime(2024, 4, 30, 0, 0, 0, 0);
+            // 
+            // lbl_ngaysinh
+            // 
+            this.lbl_ngaysinh.AutoSize = true;
+            this.lbl_ngaysinh.Location = new System.Drawing.Point(161, 87);
+            this.lbl_ngaysinh.Name = "lbl_ngaysinh";
+            this.lbl_ngaysinh.Size = new System.Drawing.Size(54, 13);
+            this.lbl_ngaysinh.TabIndex = 0;
+            this.lbl_ngaysinh.Text = "Ngày sinh";
             // 
             // frm_thongtinnhanvien
             // 
@@ -260,9 +260,9 @@
             this.Text = "frm_thongtinnhanvien";
             this.tb_thongtinnhanvien.ResumeLayout(false);
             this.tb_xemthongtin.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_xemthongtin)).EndInit();
             this.tb_capnhatthongtin.ResumeLayout(false);
             this.tb_capnhatthongtin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtg_xemthongtin)).EndInit();
             this.ResumeLayout(false);
 
         }
