@@ -101,6 +101,12 @@
     <Compile Include="frm_phanquyen.Designer.cs">
       <DependentUpon>frm_phanquyen.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_quanlytructiep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_quanlytructiep.Designer.cs">
+      <DependentUpon>frm_quanlytructiep.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_quyen.cs">
       <SubType>Form</SubType>
     </Compile>
