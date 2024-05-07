@@ -65,7 +65,7 @@
             this.ptb.Dock = System.Windows.Forms.DockStyle.Right;
             this.ptb.Image = global::Quan_ly_NV.Properties.Resources.teamwork;
             this.ptb.Location = new System.Drawing.Point(804, 0);
-            this.ptb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ptb.Margin = new System.Windows.Forms.Padding(4);
             this.ptb.Name = "ptb";
             this.ptb.Size = new System.Drawing.Size(615, 690);
             this.ptb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -85,7 +85,7 @@
             this.pnl_login.Controls.Add(this.lbl_welcome);
             this.pnl_login.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnl_login.Location = new System.Drawing.Point(0, 0);
-            this.pnl_login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_login.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_login.Name = "pnl_login";
             this.pnl_login.Size = new System.Drawing.Size(532, 690);
             this.pnl_login.TabIndex = 1;
@@ -93,12 +93,13 @@
             // cb_role
             // 
             this.cb_role.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(125)))), ((int)(((byte)(129)))));
+            this.cb_role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_role.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cb_role.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_role.ForeColor = System.Drawing.SystemColors.InfoText;
             this.cb_role.FormattingEnabled = true;
             this.cb_role.Location = new System.Drawing.Point(61, 508);
-            this.cb_role.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_role.Margin = new System.Windows.Forms.Padding(4);
             this.cb_role.Name = "cb_role";
             this.cb_role.Size = new System.Drawing.Size(420, 40);
             this.cb_role.TabIndex = 7;
@@ -123,7 +124,7 @@
             this.btn_Enter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Enter.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Enter.Location = new System.Drawing.Point(176, 577);
-            this.btn_Enter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Enter.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Enter.Name = "btn_Enter";
             this.btn_Enter.Size = new System.Drawing.Size(155, 54);
             this.btn_Enter.TabIndex = 5;
@@ -136,9 +137,10 @@
             this.txt_password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(125)))), ((int)(((byte)(129)))));
             this.txt_password.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_password.Location = new System.Drawing.Point(64, 367);
-            this.txt_password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_password.Margin = new System.Windows.Forms.Padding(4);
             this.txt_password.Multiline = true;
             this.txt_password.Name = "txt_password";
+            this.txt_password.PasswordChar = '*';
             this.txt_password.Size = new System.Drawing.Size(419, 53);
             this.txt_password.TabIndex = 4;
             // 
@@ -159,7 +161,7 @@
             this.txt_username.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(125)))), ((int)(((byte)(129)))));
             this.txt_username.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_username.Location = new System.Drawing.Point(64, 236);
-            this.txt_username.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_username.Margin = new System.Windows.Forms.Padding(4);
             this.txt_username.Multiline = true;
             this.txt_username.Name = "txt_username";
             this.txt_username.Size = new System.Drawing.Size(419, 53);
@@ -198,7 +200,7 @@
             this.Controls.Add(this.pnl_login);
             this.Controls.Add(this.ptb);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_login";
             this.Text = "Đăng nhập";
             this.Load += new System.EventHandler(this.frm_login_Load);

@@ -47,201 +47,207 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frm_admin.cs">
+    <Compile Include="BLL\EmployeeBLL.cs" />
+    <Compile Include="BLL\RoleBLL.cs" />
+    <Compile Include="DAL\DataHelper.cs" />
+    <Compile Include="DAL\EmployeeDAL.cs" />
+    <Compile Include="DAL\RoleDAL.cs" />
+    <Compile Include="DTO\RoleDTO.cs" />
+    <Compile Include="GUI\frm_admin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_admin.Designer.cs">
+    <Compile Include="GUI\frm_admin.Designer.cs">
       <DependentUpon>frm_admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_capnhattaichinh.cs">
+    <Compile Include="GUI\frm_capnhattaichinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_capnhattaichinh.Designer.cs">
+    <Compile Include="GUI\frm_capnhattaichinh.Designer.cs">
       <DependentUpon>frm_capnhattaichinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_crud_dean.cs">
+    <Compile Include="GUI\frm_crud_dean.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_crud_dean.Designer.cs">
+    <Compile Include="GUI\frm_crud_dean.Designer.cs">
       <DependentUpon>frm_crud_dean.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_crud_phancong.cs">
+    <Compile Include="GUI\frm_crud_phancong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_crud_phancong.Designer.cs">
+    <Compile Include="GUI\frm_crud_phancong.Designer.cs">
       <DependentUpon>frm_crud_phancong.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_crud_taikhoan.cs">
+    <Compile Include="GUI\frm_crud_taikhoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_crud_taikhoan.Designer.cs">
+    <Compile Include="GUI\frm_crud_taikhoan.Designer.cs">
       <DependentUpon>frm_crud_taikhoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_crud_phongban.cs">
+    <Compile Include="GUI\frm_crud_phongban.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_crud_phongban.Designer.cs">
+    <Compile Include="GUI\frm_crud_phongban.Designer.cs">
       <DependentUpon>frm_crud_phongban.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_danhsach.cs">
+    <Compile Include="GUI\frm_danhsach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_danhsach.Designer.cs">
+    <Compile Include="GUI\frm_danhsach.Designer.cs">
       <DependentUpon>frm_danhsach.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_nhansu .cs">
+    <Compile Include="GUI\frm_nhansu .cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_nhansu .Designer.cs">
+    <Compile Include="GUI\frm_nhansu .Designer.cs">
       <DependentUpon>frm_nhansu .cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_employee.cs">
+    <Compile Include="GUI\frm_employee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_employee.Designer.cs">
+    <Compile Include="GUI\frm_employee.Designer.cs">
       <DependentUpon>frm_employee.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_login.cs">
+    <Compile Include="GUI\frm_login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="GUI\Form1.Designer.cs">
       <DependentUpon>frm_login.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_phanquyen.cs">
+    <Compile Include="GUI\frm_phanquyen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_phanquyen.Designer.cs">
+    <Compile Include="GUI\frm_phanquyen.Designer.cs">
       <DependentUpon>frm_phanquyen.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_quanlytructiep.cs">
+    <Compile Include="GUI\frm_quanlytructiep.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_quanlytructiep.Designer.cs">
+    <Compile Include="GUI\frm_quanlytructiep.Designer.cs">
       <DependentUpon>frm_quanlytructiep.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_quyen.cs">
+    <Compile Include="GUI\frm_quyen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_quyen.Designer.cs">
+    <Compile Include="GUI\frm_quyen.Designer.cs">
       <DependentUpon>frm_quyen.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_taichinh.cs">
+    <Compile Include="GUI\frm_taichinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_taichinh.Designer.cs">
+    <Compile Include="GUI\frm_taichinh.Designer.cs">
       <DependentUpon>frm_taichinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_thongtindean.cs">
+    <Compile Include="GUI\frm_thongtindean.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_thongtindean.Designer.cs">
+    <Compile Include="GUI\frm_thongtindean.Designer.cs">
       <DependentUpon>frm_thongtindean.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_thongtinnhanvien.cs">
+    <Compile Include="GUI\frm_thongtinnhanvien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_thongtinnhanvien.Designer.cs">
+    <Compile Include="GUI\frm_thongtinnhanvien.Designer.cs">
       <DependentUpon>frm_thongtinnhanvien.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_thongtinphancong.cs">
+    <Compile Include="GUI\frm_thongtinphancong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_thongtinphancong.Designer.cs">
+    <Compile Include="GUI\frm_thongtinphancong.Designer.cs">
       <DependentUpon>frm_thongtinphancong.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_thongtinphongban.cs">
+    <Compile Include="GUI\frm_thongtinphongban.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_thongtinphongban.Designer.cs">
+    <Compile Include="GUI\frm_thongtinphongban.Designer.cs">
       <DependentUpon>frm_thongtinphongban.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_truongdean.cs">
+    <Compile Include="GUI\frm_truongdean.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_truongdean.Designer.cs">
+    <Compile Include="GUI\frm_truongdean.Designer.cs">
       <DependentUpon>frm_truongdean.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_truongdeann.cs">
+    <Compile Include="GUI\frm_truongdeann.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_truongdeann.Designer.cs">
+    <Compile Include="GUI\frm_truongdeann.Designer.cs">
       <DependentUpon>frm_truongdeann.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_crud_nhanvien.cs">
+    <Compile Include="GUI\frm_crud_nhanvien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_crud_nhanvien.Designer.cs">
+    <Compile Include="GUI\frm_crud_nhanvien.Designer.cs">
       <DependentUpon>frm_crud_nhanvien.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_truongphong.cs">
+    <Compile Include="GUI\frm_truongphong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_truongphong.Designer.cs">
+    <Compile Include="GUI\frm_truongphong.Designer.cs">
       <DependentUpon>frm_truongphong.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frm_admin.resx">
+    <EmbeddedResource Include="GUI\frm_admin.resx">
       <DependentUpon>frm_admin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_capnhattaichinh.resx">
+    <EmbeddedResource Include="GUI\frm_capnhattaichinh.resx">
       <DependentUpon>frm_capnhattaichinh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_crud_dean.resx">
+    <EmbeddedResource Include="GUI\frm_crud_dean.resx">
       <DependentUpon>frm_crud_dean.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_crud_phancong.resx">
+    <EmbeddedResource Include="GUI\frm_crud_phancong.resx">
       <DependentUpon>frm_crud_phancong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_crud_phongban.resx">
+    <EmbeddedResource Include="GUI\frm_crud_phongban.resx">
       <DependentUpon>frm_crud_phongban.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_crud_taikhoan.resx">
+    <EmbeddedResource Include="GUI\frm_crud_taikhoan.resx">
       <DependentUpon>frm_crud_taikhoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_danhsach.resx">
+    <EmbeddedResource Include="GUI\frm_danhsach.resx">
       <DependentUpon>frm_danhsach.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_nhansu .resx">
+    <EmbeddedResource Include="GUI\frm_nhansu .resx">
       <DependentUpon>frm_nhansu .cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_employee.resx">
+    <EmbeddedResource Include="GUI\frm_employee.resx">
       <DependentUpon>frm_employee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_login.resx">
+    <EmbeddedResource Include="GUI\frm_login.resx">
       <DependentUpon>frm_login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_phanquyen.resx">
+    <EmbeddedResource Include="GUI\frm_phanquyen.resx">
       <DependentUpon>frm_phanquyen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_quyen.resx">
+    <EmbeddedResource Include="GUI\frm_quyen.resx">
       <DependentUpon>frm_quyen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_taichinh.resx">
+    <EmbeddedResource Include="GUI\frm_taichinh.resx">
       <DependentUpon>frm_taichinh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_thongtindean.resx">
+    <EmbeddedResource Include="GUI\frm_thongtindean.resx">
       <DependentUpon>frm_thongtindean.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_thongtinnhanvien.resx">
+    <EmbeddedResource Include="GUI\frm_thongtinnhanvien.resx">
       <DependentUpon>frm_thongtinnhanvien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_thongtinphancong.resx">
+    <EmbeddedResource Include="GUI\frm_thongtinphancong.resx">
       <DependentUpon>frm_thongtinphancong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_thongtinphongban.resx">
+    <EmbeddedResource Include="GUI\frm_thongtinphongban.resx">
       <DependentUpon>frm_thongtinphongban.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_truongdean.resx">
+    <EmbeddedResource Include="GUI\frm_truongdean.resx">
       <DependentUpon>frm_truongdean.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_truongdeann.resx">
+    <EmbeddedResource Include="GUI\frm_truongdeann.resx">
       <DependentUpon>frm_truongdeann.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_crud_nhanvien.resx">
+    <EmbeddedResource Include="GUI\frm_crud_nhanvien.resx">
       <DependentUpon>frm_crud_nhanvien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_truongphong.resx">
+    <EmbeddedResource Include="GUI\frm_truongphong.resx">
       <DependentUpon>frm_truongphong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
