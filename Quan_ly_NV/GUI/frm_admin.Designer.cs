@@ -29,21 +29,23 @@
         private void InitializeComponent()
         {
             this.panel_show_enter = new System.Windows.Forms.Panel();
+            this.panel_show = new System.Windows.Forms.Panel();
             this.pnl_name = new System.Windows.Forms.Panel();
             this.lbl_tiltle = new System.Windows.Forms.Label();
             this.pnl_menu = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pnl_show_formchild = new System.Windows.Forms.Panel();
             this.btn_phanquyen = new System.Windows.Forms.Button();
             this.btn_crud = new System.Windows.Forms.Button();
             this.btn_quyen = new System.Windows.Forms.Button();
             this.btn_danhsach = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pnl_show_formchild = new System.Windows.Forms.Panel();
-            this.panel_show = new System.Windows.Forms.Panel();
+            this.btn_Exit = new System.Windows.Forms.Button();
             this.panel_show_enter.SuspendLayout();
             this.pnl_name.SuspendLayout();
             this.pnl_menu.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_show_enter
@@ -60,6 +62,13 @@
             this.panel_show_enter.TabIndex = 1;
             this.panel_show_enter.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_show_Paint);
             // 
+            // panel_show
+            // 
+            this.panel_show.Location = new System.Drawing.Point(287, 85);
+            this.panel_show.Name = "panel_show";
+            this.panel_show.Size = new System.Drawing.Size(777, 476);
+            this.panel_show.TabIndex = 2;
+            // 
             // pnl_name
             // 
             this.pnl_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(194)))));
@@ -74,10 +83,10 @@
             // lbl_tiltle
             // 
             this.lbl_tiltle.AutoSize = true;
-            this.lbl_tiltle.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tiltle.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tiltle.Location = new System.Drawing.Point(364, 29);
             this.lbl_tiltle.Name = "lbl_tiltle";
-            this.lbl_tiltle.Size = new System.Drawing.Size(69, 30);
+            this.lbl_tiltle.Size = new System.Drawing.Size(72, 30);
             this.lbl_tiltle.TabIndex = 0;
             this.lbl_tiltle.Text = "Home";
             // 
@@ -106,6 +115,13 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(284, 485);
             this.panel2.TabIndex = 1;
+            // 
+            // pnl_show_formchild
+            // 
+            this.pnl_show_formchild.Location = new System.Drawing.Point(283, 10);
+            this.pnl_show_formchild.Name = "pnl_show_formchild";
+            this.pnl_show_formchild.Size = new System.Drawing.Size(776, 474);
+            this.pnl_show_formchild.TabIndex = 4;
             // 
             // btn_phanquyen
             // 
@@ -173,24 +189,27 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(194)))));
+            this.panel1.Controls.Add(this.btn_Exit);
             this.panel1.Location = new System.Drawing.Point(3, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(286, 81);
             this.panel1.TabIndex = 0;
             // 
-            // pnl_show_formchild
+            // btn_Exit
             // 
-            this.pnl_show_formchild.Location = new System.Drawing.Point(283, 10);
-            this.pnl_show_formchild.Name = "pnl_show_formchild";
-            this.pnl_show_formchild.Size = new System.Drawing.Size(776, 474);
-            this.pnl_show_formchild.TabIndex = 4;
-            // 
-            // panel_show
-            // 
-            this.panel_show.Location = new System.Drawing.Point(287, 85);
-            this.panel_show.Name = "panel_show";
-            this.panel_show.Size = new System.Drawing.Size(777, 476);
-            this.panel_show.TabIndex = 2;
+            this.btn_Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Exit.FlatAppearance.BorderSize = 0;
+            this.btn_Exit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Exit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Exit.Location = new System.Drawing.Point(37, 12);
+            this.btn_Exit.Name = "btn_Exit";
+            this.btn_Exit.Size = new System.Drawing.Size(202, 48);
+            this.btn_Exit.TabIndex = 5;
+            this.btn_Exit.Text = "Đăng xuất";
+            this.btn_Exit.UseVisualStyleBackColor = true;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
             // frm_admin
             // 
@@ -208,6 +227,7 @@
             this.pnl_name.PerformLayout();
             this.pnl_menu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -225,5 +245,6 @@
         private System.Windows.Forms.Button btn_phanquyen;
         private System.Windows.Forms.Panel pnl_show_formchild;
         private System.Windows.Forms.Panel panel_show;
+        private System.Windows.Forms.Button btn_Exit;
     }
 }

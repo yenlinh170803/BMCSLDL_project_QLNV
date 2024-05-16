@@ -81,5 +81,10 @@ namespace Quan_ly_NV
             lbl_tiltle.Text = btn_crud_dean.Text;
             OpenChildForm(new frm_crud_dean(), sender);
         }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

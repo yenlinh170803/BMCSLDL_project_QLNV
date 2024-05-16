@@ -76,5 +76,10 @@ namespace Quan_ly_NV
             lbl_tiltle.Text = btn_thongtinphancong.Text;
             OpenChildForm(new frm_thongtinphancong(),sender);
         }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

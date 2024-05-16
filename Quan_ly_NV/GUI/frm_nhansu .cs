@@ -88,5 +88,10 @@ namespace Quan_ly_NV
             btn_home.Text = btn_crud_nhanvien.Text;
             OpenChildForm(new frm_crud_nhanvien(), sender);
         }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -224,6 +224,9 @@
     <EmbeddedResource Include="GUI\frm_phanquyen.resx">
       <DependentUpon>frm_phanquyen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_quanlytructiep.resx">
+      <DependentUpon>frm_quanlytructiep.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frm_quyen.resx">
       <DependentUpon>frm_quyen.cs</DependentUpon>
     </EmbeddedResource>

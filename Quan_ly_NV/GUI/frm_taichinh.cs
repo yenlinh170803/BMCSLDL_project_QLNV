@@ -81,5 +81,10 @@ namespace Quan_ly_NV
             lbl_tiltle.Text=btn_capnhatluongphucap.Text;
             OpenChildForm(new frm_capnhattaichinh(), sender);
         }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

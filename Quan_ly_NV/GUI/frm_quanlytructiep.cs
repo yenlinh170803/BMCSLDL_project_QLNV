@@ -74,5 +74,10 @@ namespace Quan_ly_NV
         {
             lbl_tiltle.Text = btn_thongtinphancong.Text;
         }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

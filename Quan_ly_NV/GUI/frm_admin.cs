@@ -85,5 +85,12 @@ namespace Quan_ly_NV
         {
 
         }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            
+            this.Close();
+           
+        }
     }
 }

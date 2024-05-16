@@ -42,10 +42,12 @@
             this.btn_thongtinnhanvien = new System.Windows.Forms.Button();
             this.pnl_show_formchild = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_Exit = new System.Windows.Forms.Button();
             this.panel_show_enter.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnl_menu.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_show_enter
@@ -223,10 +225,26 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(194)))));
+            this.panel1.Controls.Add(this.btn_Exit);
             this.panel1.Location = new System.Drawing.Point(3, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(286, 81);
             this.panel1.TabIndex = 0;
+            // 
+            // btn_Exit
+            // 
+            this.btn_Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Exit.FlatAppearance.BorderSize = 0;
+            this.btn_Exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Exit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Exit.Location = new System.Drawing.Point(42, 16);
+            this.btn_Exit.Name = "btn_Exit";
+            this.btn_Exit.Size = new System.Drawing.Size(202, 48);
+            this.btn_Exit.TabIndex = 6;
+            this.btn_Exit.Text = "Đăng xuất";
+            this.btn_Exit.UseVisualStyleBackColor = true;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
             // frm_nhansu
             // 
@@ -241,6 +259,7 @@
             this.panel3.PerformLayout();
             this.pnl_menu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -261,5 +280,6 @@
         private System.Windows.Forms.Button btn_thongtinnhanvien;
         private System.Windows.Forms.Button btn_crud_phongban;
         private System.Windows.Forms.Button btn_crud_nhanvien;
+        private System.Windows.Forms.Button btn_Exit;
     }
 }
