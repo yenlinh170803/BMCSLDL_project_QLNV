@@ -1,4 +1,5 @@
 ﻿using Quan_ly_NV.DAL;
+using Quan_ly_NV.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,10 @@ namespace Quan_ly_NV.BLL
         public bool Login(string username, byte[] password, string roleid)
         {
             return _employeeDAL.VerifyLogin(username, password, roleid);
+        }
+        public List<NhanVienDTO> GetAllDepartmentLeads()
+        {
+            return _employeeDAL.GetAllDepartmentLeads();
         }
     }
 }

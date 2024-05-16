@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Quan_ly_NV.DTO;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -31,6 +33,28 @@ namespace Quan_ly_NV.DAL
                 return false;
             }
             return true;
-        } 
+        }
+        public List<NhanVienDTO> GetAllDepartmentLeads()
+        {
+            string query = @"SELECT MANV, TENNV
+                             FROM NHANVIEN
+                             WHERE MAVT = 'VT02'";
+
+            DataTable table = _helper.ExecuteQuery(query);
+            List<NhanVienDTO> departmentLeads = new List<NhanVienDTO>();
+
+            foreach (DataRow row in table.Rows)
+            {
+                NhanVienDTO nv = new NhanVienDTO
+                {
+                    MaNV = row["MANV"].ToString(),
+                    HoTenNV = row["TENNV"].ToString()
+                };
+
+                departmentLeads.Add(nv);
+            }
+
+            return departmentLeads;
+        }
     }
 }

@@ -42,12 +42,14 @@
             this.btn_loaddata__xtt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_loaddata__xtt.FlatAppearance.BorderSize = 0;
             this.btn_loaddata__xtt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_loaddata__xtt.Location = new System.Drawing.Point(626, 43);
+            this.btn_loaddata__xtt.Location = new System.Drawing.Point(835, 53);
+            this.btn_loaddata__xtt.Margin = new System.Windows.Forms.Padding(4);
             this.btn_loaddata__xtt.Name = "btn_loaddata__xtt";
-            this.btn_loaddata__xtt.Size = new System.Drawing.Size(116, 25);
+            this.btn_loaddata__xtt.Size = new System.Drawing.Size(155, 31);
             this.btn_loaddata__xtt.TabIndex = 2;
             this.btn_loaddata__xtt.Text = "Load data";
             this.btn_loaddata__xtt.UseVisualStyleBackColor = true;
+            this.btn_loaddata__xtt.Click += new System.EventHandler(this.btn_loaddata__xtt_Click);
             // 
             // dtg_thongtinphongban
             // 
@@ -57,33 +59,43 @@
             this.clb_mapb,
             this.clb_tenpb,
             this.clb_trgphg});
-            this.dtg_thongtinphongban.Location = new System.Drawing.Point(1, 102);
+            this.dtg_thongtinphongban.Location = new System.Drawing.Point(13, 125);
+            this.dtg_thongtinphongban.Margin = new System.Windows.Forms.Padding(4);
             this.dtg_thongtinphongban.Name = "dtg_thongtinphongban";
-            this.dtg_thongtinphongban.Size = new System.Drawing.Size(802, 351);
+            this.dtg_thongtinphongban.RowHeadersWidth = 51;
+            this.dtg_thongtinphongban.Size = new System.Drawing.Size(1069, 432);
             this.dtg_thongtinphongban.TabIndex = 3;
+            this.dtg_thongtinphongban.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_thongtinphongban_CellContentClick);
             // 
             // clb_mapb
             // 
             this.clb_mapb.HeaderText = "Mã PB";
+            this.clb_mapb.MinimumWidth = 6;
             this.clb_mapb.Name = "clb_mapb";
+            this.clb_mapb.Width = 125;
             // 
             // clb_tenpb
             // 
             this.clb_tenpb.HeaderText = "Tên PB";
+            this.clb_tenpb.MinimumWidth = 6;
             this.clb_tenpb.Name = "clb_tenpb";
+            this.clb_tenpb.Width = 125;
             // 
             // clb_trgphg
             // 
             this.clb_trgphg.HeaderText = "TrPHG";
+            this.clb_trgphg.MinimumWidth = 6;
             this.clb_trgphg.Name = "clb_trgphg";
+            this.clb_trgphg.Width = 125;
             // 
             // frm_thongtinphongban
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.dtg_thongtinphongban);
             this.Controls.Add(this.btn_loaddata__xtt);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_thongtinphongban";
             this.Text = "frm_thongtinphongban";
             ((System.ComponentModel.ISupportInitialize)(this.dtg_thongtinphongban)).EndInit();
