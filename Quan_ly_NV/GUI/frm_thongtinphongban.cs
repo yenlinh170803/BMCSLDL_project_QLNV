@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Quan_ly_NV.BLL;
+using Quan_ly_NV.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,22 @@ namespace Quan_ly_NV
         public frm_thongtinphongban()
         {
             InitializeComponent();
+        }
+
+        private void btn_loaddata__xtt_Click(object sender, EventArgs e)
+        {
+            PhongBanBLL phongBanBLL = new PhongBanBLL();
+
+            List<PhongBanDTO> departments = phongBanBLL.GetAllDepartments();
+            dtg_thongtinphongban.DataSource = departments;
+            dtg_thongtinphongban.Columns["clb_mapb"].HeaderText = "Mã PB";
+            dtg_thongtinphongban.Columns["clb_tenpb"].HeaderText = "Tên PB";
+            dtg_thongtinphongban.Columns["clb_trgphg"].HeaderText = "TrPHG";
+        }
+
+        private void dtg_thongtinphongban_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

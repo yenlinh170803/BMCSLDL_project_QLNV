@@ -48,10 +48,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\EmployeeBLL.cs" />
+    <Compile Include="BLL\PhongBanBLL.cs" />
     <Compile Include="BLL\RoleBLL.cs" />
     <Compile Include="DAL\DataHelper.cs" />
     <Compile Include="DAL\EmployeeDAL.cs" />
+    <Compile Include="DAL\PhongBanDAL.cs" />
     <Compile Include="DAL\RoleDAL.cs" />
+    <Compile Include="DTO\NhanVienDTO.cs" />
+    <Compile Include="DTO\PhongBanDTO.cs" />
     <Compile Include="DTO\RoleDTO.cs" />
     <Compile Include="GUI\frm_admin.cs">
       <SubType>Form</SubType>
