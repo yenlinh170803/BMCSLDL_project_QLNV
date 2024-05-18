@@ -63,6 +63,7 @@
             this.btnCapnhat.TabIndex = 10;
             this.btnCapnhat.Text = "Cập nhật";
             this.btnCapnhat.UseVisualStyleBackColor = true;
+            this.btnCapnhat.Click += new System.EventHandler(this.btnCapnhat_Click);
             // 
             // txtPhucap
             // 
@@ -121,6 +122,7 @@
             this.Controls.Add(this.panel_show);
             this.Name = "frm_capnhattaichinh";
             this.Text = "frm_capnhattaichinh";
+            this.Load += new System.EventHandler(this.frm_capnhattaichinh_Load);
             this.panel_show.ResumeLayout(false);
             this.panel_show.PerformLayout();
             this.ResumeLayout(false);

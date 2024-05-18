@@ -92,6 +92,7 @@
             this.btn_loaddata__xtt.TabIndex = 1;
             this.btn_loaddata__xtt.Text = "Load data";
             this.btn_loaddata__xtt.UseVisualStyleBackColor = true;
+            this.btn_loaddata__xtt.Click += new System.EventHandler(this.btn_loaddata__xtt_Click);
             // 
             // dtg_xemthongtin
             // 
@@ -198,6 +199,7 @@
             this.btn_capnhat.TabIndex = 6;
             this.btn_capnhat.Text = "Cập nhật ";
             this.btn_capnhat.UseVisualStyleBackColor = true;
+            this.btn_capnhat.Click += new System.EventHandler(this.btn_capnhat_Click);
             // 
             // txt_sdt
             // 

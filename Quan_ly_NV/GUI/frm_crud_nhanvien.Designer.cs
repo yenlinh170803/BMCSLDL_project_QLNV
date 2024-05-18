@@ -59,7 +59,7 @@
             this.lbl_capnhatphai = new System.Windows.Forms.Label();
             this.cb_capnhatnguoiql = new System.Windows.Forms.ComboBox();
             this.lbl_capnhatnguoiql = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.cb_capnhatvaitro = new System.Windows.Forms.ComboBox();
             this.lbl_capnhatvaitro = new System.Windows.Forms.Label();
             this.txt_capnhattennv = new System.Windows.Forms.TextBox();
             this.lbl_capnhattennv = new System.Windows.Forms.Label();
@@ -133,6 +133,7 @@
             this.btn_them.TabIndex = 60;
             this.btn_them.Text = "Thêm";
             this.btn_them.UseVisualStyleBackColor = true;
+            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
             // cb_themphong
             // 
@@ -287,7 +288,7 @@
             this.tp_capnhatnhanvien.Controls.Add(this.lbl_capnhatphai);
             this.tp_capnhatnhanvien.Controls.Add(this.cb_capnhatnguoiql);
             this.tp_capnhatnhanvien.Controls.Add(this.lbl_capnhatnguoiql);
-            this.tp_capnhatnhanvien.Controls.Add(this.comboBox7);
+            this.tp_capnhatnhanvien.Controls.Add(this.cb_capnhatvaitro);
             this.tp_capnhatnhanvien.Controls.Add(this.lbl_capnhatvaitro);
             this.tp_capnhatnhanvien.Controls.Add(this.txt_capnhattennv);
             this.tp_capnhatnhanvien.Controls.Add(this.lbl_capnhattennv);
@@ -324,6 +325,7 @@
             this.btn_capnhat.TabIndex = 79;
             this.btn_capnhat.Text = "Cập nhật";
             this.btn_capnhat.UseVisualStyleBackColor = true;
+            this.btn_capnhat.Click += new System.EventHandler(this.btn_capnhat_Click);
             // 
             // cb_capnhatphong
             // 
@@ -385,13 +387,13 @@
             this.lbl_capnhatnguoiql.TabIndex = 72;
             this.lbl_capnhatnguoiql.Text = "Người quản lý";
             // 
-            // comboBox7
+            // cb_capnhatvaitro
             // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(149, 240);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(185, 21);
-            this.comboBox7.TabIndex = 71;
+            this.cb_capnhatvaitro.FormattingEnabled = true;
+            this.cb_capnhatvaitro.Location = new System.Drawing.Point(149, 240);
+            this.cb_capnhatvaitro.Name = "cb_capnhatvaitro";
+            this.cb_capnhatvaitro.Size = new System.Drawing.Size(185, 21);
+            this.cb_capnhatvaitro.TabIndex = 71;
             // 
             // lbl_capnhatvaitro
             // 
@@ -517,7 +519,7 @@
         private System.Windows.Forms.Label lbl_capnhatphai;
         private System.Windows.Forms.ComboBox cb_capnhatnguoiql;
         private System.Windows.Forms.Label lbl_capnhatnguoiql;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox cb_capnhatvaitro;
         private System.Windows.Forms.Label lbl_capnhatvaitro;
         private System.Windows.Forms.TextBox txt_capnhattennv;
         private System.Windows.Forms.Label lbl_capnhattennv;
