@@ -79,5 +79,28 @@ namespace Quan_ly_NV.DAL
                 _connection.Close();
             }
         }
+
+        // Thêm phương thức ExecuteNonQuery mới
+        public void ExecuteNonQuery(string query, SqlParameter[] parameters)
+        {
+            SqlCommand command = new SqlCommand(query, _connection);
+            try
+            {
+                _connection.Open();
+                if (parameters != null)
+                {
+                    command.Parameters.AddRange(parameters);
+                }
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi trong quá trình thực hiện CUD: " + ex.Message);
+            }
+            finally
+            {
+                _connection.Close();
+            }
+        }
     }
 }
