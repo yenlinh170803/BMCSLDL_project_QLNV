@@ -47,14 +47,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\ProjectBLL.cs" />
     <Compile Include="BLL\EmployeeBLL.cs" />
+    <Compile Include="BLL\AssignTaskBLL.cs" />
     <Compile Include="BLL\PhongBanBLL.cs" />
     <Compile Include="BLL\RoleBLL.cs" />
     <Compile Include="DAL\DataHelper.cs" />
+    <Compile Include="DAL\ProjectDAL.cs" />
     <Compile Include="DAL\EmployeeDAL.cs" />
+    <Compile Include="DAL\AssignTaskDAL.cs" />
     <Compile Include="DAL\PhongBanDAL.cs" />
     <Compile Include="DAL\RoleDAL.cs" />
+    <Compile Include="DTO\ProjectDTO.cs" />
     <Compile Include="DTO\NhanVienDTO.cs" />
+    <Compile Include="DTO\AssignTaskDTO.cs" />
     <Compile Include="DTO\PhongBanDTO.cs" />
     <Compile Include="DTO\RoleDTO.cs" />
     <Compile Include="GUI\frm_admin.cs">
@@ -293,4 +299,8 @@
     <None Include="Resources\AppIcon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>if exist "$(TargetPath).locked" del "$(TargetPath).locked"
+if exist "$(TargetPath)" if not exist "$(TargetPath).locked" move "$(TargetPath)" "$(TargetPath).locked"</PreBuildEvent>
+  </PropertyGroup>
 </Project>
