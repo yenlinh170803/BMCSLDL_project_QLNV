@@ -15,11 +15,11 @@ namespace Quan_ly_NV
     public partial class frm_crud_phongban : Form
     {
         private EmployeeBLL _employeeBLL;
-        private PhongBanBLL _phongBanBLL;
+        private DepartmentBLL _phongBanBLL;
         public frm_crud_phongban()
         {
             _employeeBLL = new EmployeeBLL();
-            _phongBanBLL = new PhongBanBLL();
+            _phongBanBLL = new DepartmentBLL();
             InitializeComponent();
             InitializeComboBoxTruongPhong();
             InitializeComboBoxMaPhongBan();
@@ -27,7 +27,7 @@ namespace Quan_ly_NV
         private void InitializeComboBoxTruongPhong()
         {
             // Get the list of department leads (VT02) from the BLL
-            List<NhanVienDTO> departmentLeads = _employeeBLL.GetAllDepartmentLeads();
+            EmployeeDTO[] departmentLeads = _employeeBLL.GetAllDepartmentLead();
 
             // Populate the ComboBox with MaNV values
             cmb_truongphong.DataSource = departmentLeads;
@@ -42,7 +42,7 @@ namespace Quan_ly_NV
         private void InitializeComboBoxMaPhongBan()
         {
             // Get the list of MaPB from PhongBanDTO using the BLL
-            List<PhongBanDTO> departments = _phongBanBLL.GetAllDepartments();
+            List<DepartmentDTO> departments = _phongBanBLL.GetAllDepartments();
 
             // Populate the ComboBox with MaPB values
             cb_maphongban.DataSource = departments;

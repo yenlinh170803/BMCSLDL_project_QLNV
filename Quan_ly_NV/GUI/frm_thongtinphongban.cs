@@ -21,9 +21,9 @@ namespace Quan_ly_NV
 
         private void btn_loaddata__xtt_Click(object sender, EventArgs e)
         {
-            PhongBanBLL phongBanBLL = new PhongBanBLL();
+            DepartmentBLL phongBanBLL = new DepartmentBLL();
 
-            List<PhongBanDTO> departments = phongBanBLL.GetAllDepartments();
+            List<DepartmentDTO> departments = phongBanBLL.GetAllDepartments();
             dtg_thongtinphongban.DataSource = departments;
             dtg_thongtinphongban.Columns["clb_mapb"].HeaderText = "Mã PB";
             dtg_thongtinphongban.Columns["clb_tenpb"].HeaderText = "Tên PB";

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,42 +18,105 @@ namespace Quan_ly_NV.DAL
         {
             _helper = new DataHelper();
         }
-        public bool VerifyLogin(string username, byte[] password, string roleId)
+        public int Login(EmployeeDTO employeeDTO)
         {
             SqlParameter[] parameters = new SqlParameter[4];
             parameters[0] = new SqlParameter("@USERNAME", System.Data.SqlDbType.VarChar, 100);
-            parameters[0].Value = username;
+            parameters[0].Value = employeeDTO.Username;
             parameters[1] = new SqlParameter("@PASSWORD", System.Data.SqlDbType.VarBinary, 8000);
-            parameters[1].Value = password;
+            parameters[1].Value = employeeDTO.Password;
             parameters[2] = new SqlParameter("@ROLEID", System.Data.SqlDbType.VarChar, 20);
-            parameters[2].Value = roleId;
+            parameters[2].Value = employeeDTO.RoleId;
             parameters[3] = new SqlParameter("@LOGINSTATUS", System.Data.SqlDbType.Int);
             parameters[3].Direction = System.Data.ParameterDirection.Output;
             _helper.ExecuteStoreProcedure("SP_LOGIN_NHANVIEN", parameters);
-            if ((int)parameters[3].Value == 0 || (int)parameters[3].Value == 2)
+            return (int)parameters[3].Value; //0: ko trung khop, 1: trung khop, 2: trung khop nhung ko mo khoa
+        }
+        public EmployeeDTO GetEmployeeFromDataRow(DataRow row)
+        {
+            EmployeeDTO employeeDTO = new EmployeeDTO();
+            employeeDTO.EmployeeId = row["MANV"].ToString();
+            employeeDTO.EmployeeName = row["TENNV"].ToString();
+            employeeDTO.DateOfBirth = new DateTime();
+            if (row["NGAYSINH"] != DBNull.Value)
+            {
+                employeeDTO.DateOfBirth = Convert.ToDateTime(row["NGAYSINH"]);
+            }
+            employeeDTO.Salary = Encoding.UTF8.GetBytes(row["LUONG"].ToString());
+            employeeDTO.Telephone = row["SODT"].ToString();
+            employeeDTO.Allowance = Encoding.UTF8.GetBytes(row["PHUCAP"].ToString());
+            employeeDTO.GenderId = row["MAGT"].ToString();
+            employeeDTO.RoleId = row["MAVT"].ToString();
+            employeeDTO.DepartmentId = row["MAPB"].ToString();
+            employeeDTO.ManagerId = row["MANQL"].ToString();
+            employeeDTO.StatusId = row["MATT"].ToString();
+            employeeDTO.Username = row["TENDN"].ToString();
+            employeeDTO.Password = Encoding.UTF8.GetBytes(row["MATKHAU"].ToString());          
+            employeeDTO.DateCreated = new DateTime();
+            if (row["NGAYTAO"] != DBNull.Value)
+            {
+                employeeDTO.DateCreated = Convert.ToDateTime(row["NGAYTAO"]);
+            }
+            return employeeDTO;
+        }
+        public EmployeeDTO[] GetAllEmployee()
+        {
+            int n = 0;
+            DataTable dataTable = new DataTable();
+            dataTable = _helper.ExecuteQuery("SELECT * FROM NHANVIEN");
+            n = dataTable.Rows.Count;
+            EmployeeDTO[] employeeDTOs = new EmployeeDTO[n];
+            if (n == 0)
+            {
+                return null;
+            }
+            else
+            {
+                for (int i = 0; i < n; i++)
+                {
+                    employeeDTOs[i] = new EmployeeDTO();
+                    employeeDTOs[i] = GetEmployeeFromDataRow(dataTable.Rows[i]);
+                }
+            }
+            return employeeDTOs;
+        }
+        public bool SetStatusEmployee(EmployeeDTO employeeDTO)
+        {
+            string query = String.Format("UPDATE NHANVIEN SET MATT='{0}' WHERE MANV='{1}'", employeeDTO.StatusId, employeeDTO.EmployeeId);
+            try
+            {
+                _helper.ExecuteNonQuery(query);
+                return true;
+            }
+            catch (Exception ex)
             {
                 return false;
             }
-            return true;
         }
-        public List<NhanVienDTO> GetAllDepartmentLeads()
+        public EmployeeDTO GetEmployeeFromEmployeeId(string employeeId)
         {
-            string query = @"SELECT MANV, TENNV
-                             FROM NHANVIEN
-                             WHERE MAVT = 'VT02'";
+            string query = String.Format("SELECT * FROM NHANVIEN WHERE MANV='{0}'", employeeId);
+            DataTable dataTable = new DataTable();
+            dataTable = _helper.ExecuteQuery(query);
+            return GetEmployeeFromDataRow(dataTable.Rows[0]);
+        }
+        public EmployeeDTO[] GetAllDepartmentLead()
+        {
+            DataTable dataTable = _helper.ExecuteQuery("SELECT * FROM NHANVIEN WHERE MAVT='VT02'");
+            int n = dataTable.Rows.Count;
+            EmployeeDTO[] departmentLeads = new EmployeeDTO[n];
 
-            DataTable table = _helper.ExecuteQuery(query);
-            List<NhanVienDTO> departmentLeads = new List<NhanVienDTO>();
-
-            foreach (DataRow row in table.Rows)
+            if(n == 0)
             {
-                NhanVienDTO nv = new NhanVienDTO
+                return null;
+            }
+            else
+            {
+                for(int i = 0; i < n; i++)
                 {
-                    MaNV = row["MANV"].ToString(),
-                    HoTenNV = row["TENNV"].ToString()
-                };
-
-                departmentLeads.Add(nv);
+                    departmentLeads[i] = new EmployeeDTO();
+                    departmentLeads[i] = GetEmployeeFromDataRow(dataTable.Rows[i]);
+                }
             }
 
             return departmentLeads;
@@ -213,6 +277,160 @@ namespace Quan_ly_NV.DAL
             catch (Exception ex)
             {
                 MessageBox.Show("Có lỗi xảy ra khi cập nhật tài chính nhân viên: " + ex.Message);
+                return false;
+            }
+        }
+        public DataTable GetEmployeeFromEmployeeUsername(string  username)
+        {
+            DataTable dataTable = new DataTable();
+            string query = string.Format("SELECT * FROM NHANVIEN WHERE TENDN='{0}'", username);
+            dataTable = _helper.ExecuteQuery(query);
+            if(dataTable.Rows.Count == 0)
+            {
+                return null;
+            }
+            return dataTable;
+        }
+        public bool CreateAccountEmployee(EmployeeDTO employeeDTO)
+        {
+            string query = "INSERT NHANVIEN(MANV, NGAYSINH, MAVT, MATT, TENDN, MATKHAU, NGAYTAO) VALUES(@MANV, @NGAYSINH, @MAVT, @MATT, @TENDN, @MATKHAU, @NGAYTAO)";
+            SqlParameter[] parameters = new SqlParameter[7];
+            parameters[0] = new SqlParameter("@MANV", SqlDbType.VarChar, 20);
+            parameters[0].Value = employeeDTO.EmployeeId;
+            parameters[1] = new SqlParameter("@NGAYSINH", SqlDbType.DateTime);
+            parameters[1].Value = employeeDTO.DateOfBirth;
+            parameters[2] = new SqlParameter("@MAVT", SqlDbType.VarChar, 20);
+            parameters[2].Value = employeeDTO.RoleId;
+            parameters[3] = new SqlParameter("@MATT", SqlDbType.VarChar, 20);
+            parameters[3].Value = employeeDTO.StatusId;
+            parameters[4] = new SqlParameter("@TENDN", SqlDbType.VarChar, 100);
+            parameters[4].Value = employeeDTO.Username;
+            parameters[5] = new SqlParameter("@MATKHAU", SqlDbType.VarBinary, 8000);
+            parameters[5].Value = employeeDTO.Password;
+            parameters[6] = new SqlParameter("@NGAYTAO", SqlDbType.DateTime);
+            parameters[6].Value = employeeDTO.DateCreated;
+            try
+            {
+                _helper.ExecuteNonQuery(query, parameters);
+                return true;
+            } catch(Exception ex)
+            {
+                return false;
+            }
+        }
+        public bool DeleteEmployeeFromEmployeeId(string employeeId)
+        {
+            string query = String.Format("DELETE FROM NHANVIEN WHERE MANV='{0}'", employeeId);
+            try
+            {
+                _helper.ExecuteNonQuery(query);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+        public bool AssignRoleToEmployee(EmployeeDTO employeeDTO, bool grantOption)
+        {
+            UpdateRoleToEmployee(employeeDTO);
+            string query = string.Format("ALTER ROLE {0} ADD MEMBER {1}", employeeDTO.RoleId, employeeDTO.EmployeeId);
+            if(grantOption)
+            {
+                query += " WITH GRANT OPTION";
+            }
+            try
+            {
+                _helper.ExecuteNonQuery(query);
+                return true;
+            } catch(Exception ex)            
+            {
+                return false; 
+            }
+        }
+        public bool UpdateRoleToEmployee(EmployeeDTO employeeDTO)
+        {
+            string query = String.Format("UPDATE NHANVIEN SET MAVT='{0}' WHERE MANV='{1}'", employeeDTO.RoleId, employeeDTO.EmployeeId);
+            try
+            {
+                _helper.ExecuteNonQuery(query);
+                return true;
+            }
+            catch(Exception ex)
+            {
+                return false;
+            }
+        }
+        public bool AssignPermissionToRole(string roleId, string permission, string obj, bool grantOption)
+        {
+            string query;
+            if(permission == "ALL")
+            {
+                permission = "SELECT, INSERT, DELETE, UPDATE";
+            }
+            if(obj == "DATABASE")
+            {
+                query = string.Format("GRANT {0} TO {1}", permission, roleId);
+            }
+            else
+            {
+                query = string.Format("GRANT {0} ON {1} TO {2}", permission, obj, roleId);
+            }
+
+            if (grantOption)
+            {
+                query += " WITH GRANT OPTION";
+            }
+            try
+            {
+                _helper.ExecuteNonQuery(query);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+        public bool RevokePermissionToRole(string roleId, string permission, string obj)
+        {
+            string query;
+            if (permission == "ALL")
+            {
+                permission = "SELECT, INSERT, DELETE, UPDATE";
+            }
+            if (obj == "DATABASE")
+            {
+                query = string.Format("REVOKE {0} TO {1} CASCADE", permission, roleId);
+            }
+            else
+            {
+                query = string.Format("REVOKE {0} ON {1} FROM {2} CASCADE", permission, obj, roleId);
+            }
+            try
+            {
+                _helper.ExecuteNonQuery(query);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+        public bool UpdatePassword(EmployeeDTO employeeDTO)
+        {
+            string query = "UPDATE NHANVIEN SET MATKHAU=@MATKHAU WHERE TENDN=@TENDN";
+            SqlParameter[] parameters = new SqlParameter[2];
+            parameters[0] = new SqlParameter("@TENDN", SqlDbType.VarChar, 100);
+            parameters[0].Value = employeeDTO.Username;
+            parameters[1] = new SqlParameter("@MATKHAU", SqlDbType.VarBinary, 8000);
+            parameters[1].Value = employeeDTO.Password;
+            try
+            {
+                _helper.ExecuteNonQuery(query, parameters);
+                return true;
+            }
+            catch (Exception ex)
+            {
                 return false;
             }
         }

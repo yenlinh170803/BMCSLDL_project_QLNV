@@ -8,16 +8,16 @@ using System.Threading.Tasks;
 
 namespace Quan_ly_NV.BLL
 {
-    internal class PhongBanBLL
+    internal class DepartmentBLL
     {
         private static PhongBanDAL _phongBanDAL;
 
-        public PhongBanBLL()
+        public DepartmentBLL()
         {
             _phongBanDAL = new PhongBanDAL();
         }
 
-        public List<PhongBanDTO> GetAllDepartments()
+        public List<DepartmentDTO> GetAllDepartments()
         {
             return _phongBanDAL.GetAllDepartments();
         }

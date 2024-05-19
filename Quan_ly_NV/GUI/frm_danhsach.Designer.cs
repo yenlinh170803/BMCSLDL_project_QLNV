@@ -46,33 +46,43 @@
             this.clb_created});
             this.dtg_danhsach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtg_danhsach.Location = new System.Drawing.Point(0, 0);
+            this.dtg_danhsach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtg_danhsach.Name = "dtg_danhsach";
-            this.dtg_danhsach.Size = new System.Drawing.Size(800, 450);
+            this.dtg_danhsach.RowHeadersWidth = 51;
+            this.dtg_danhsach.Size = new System.Drawing.Size(1067, 554);
             this.dtg_danhsach.TabIndex = 0;
             // 
             // clb_username
             // 
             this.clb_username.HeaderText = "USERNAME";
+            this.clb_username.MinimumWidth = 6;
             this.clb_username.Name = "clb_username";
+            this.clb_username.Width = 125;
             // 
             // clb_userid
             // 
             this.clb_userid.HeaderText = "USERID";
+            this.clb_userid.MinimumWidth = 6;
             this.clb_userid.Name = "clb_userid";
+            this.clb_userid.Width = 125;
             // 
             // clb_created
             // 
             this.clb_created.HeaderText = "CREATED";
+            this.clb_created.MinimumWidth = 6;
             this.clb_created.Name = "clb_created";
+            this.clb_created.Width = 125;
             // 
             // frm_danhsach
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.dtg_danhsach);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_danhsach";
             this.Text = "frm_danhsach";
+            this.Load += new System.EventHandler(this.frm_danhsach_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtg_danhsach)).EndInit();
             this.ResumeLayout(false);
 

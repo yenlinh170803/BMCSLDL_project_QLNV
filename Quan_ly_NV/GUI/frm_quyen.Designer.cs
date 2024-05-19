@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.pnl_quyen = new System.Windows.Forms.DataGridView();
-            this.cl_grantee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_objectname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_colum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_grantable = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pnl_quyen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,50 +43,64 @@
             this.pnl_quyen.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.pnl_quyen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.pnl_quyen.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cl_grantee,
-            this.cl_objectname,
-            this.cl_colum,
-            this.cl_grantable,
-            this.cl_type});
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
             this.pnl_quyen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_quyen.Location = new System.Drawing.Point(0, 0);
+            this.pnl_quyen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_quyen.Name = "pnl_quyen";
-            this.pnl_quyen.Size = new System.Drawing.Size(800, 450);
+            this.pnl_quyen.RowHeadersWidth = 51;
+            this.pnl_quyen.Size = new System.Drawing.Size(1067, 554);
             this.pnl_quyen.TabIndex = 0;
             // 
-            // cl_grantee
+            // Column1
             // 
-            this.cl_grantee.HeaderText = "Grantee";
-            this.cl_grantee.Name = "cl_grantee";
+            this.Column1.HeaderText = "Grantee";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
             // 
-            // cl_objectname
+            // Column2
             // 
-            this.cl_objectname.HeaderText = "Object name";
-            this.cl_objectname.Name = "cl_objectname";
+            this.Column2.HeaderText = "Object name";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
             // 
-            // cl_colum
+            // Column3
             // 
-            this.cl_colum.HeaderText = "Column";
-            this.cl_colum.Name = "cl_colum";
+            this.Column3.HeaderText = "Column";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
             // 
-            // cl_grantable
+            // Column4
             // 
-            this.cl_grantable.HeaderText = "Grantable";
-            this.cl_grantable.Name = "cl_grantable";
+            this.Column4.HeaderText = "Grantable";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
             // 
-            // cl_type
+            // Column5
             // 
-            this.cl_type.HeaderText = "Type";
-            this.cl_type.Name = "cl_type";
+            this.Column5.HeaderText = "Type";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 125;
             // 
             // frm_quyen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.pnl_quyen);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_quyen";
             this.Text = "frm_quyen";
+            this.Load += new System.EventHandler(this.frm_quyen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pnl_quyen)).EndInit();
             this.ResumeLayout(false);
 
@@ -95,10 +109,10 @@
         #endregion
 
         private System.Windows.Forms.DataGridView pnl_quyen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cl_grantee;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cl_objectname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cl_colum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cl_grantable;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cl_type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

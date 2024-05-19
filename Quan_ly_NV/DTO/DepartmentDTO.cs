@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Quan_ly_NV.DTO
 {
-    internal class PhongBanDTO
+    internal class DepartmentDTO
     {
         public string MaPB { get; set; }
         public string TenPB { get; set; }

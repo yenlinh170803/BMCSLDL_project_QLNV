@@ -18,6 +18,10 @@ namespace Quan_ly_NV.DAL
             string connection = ConfigurationSettings.AppSettings["DBConnection"];
             _connection = new SqlConnection(connection);
         }
+        public void SetConnection(string connection)
+        {
+            _connection = new SqlConnection(connection);
+        }
         //Thực hiện các câu truy vấn
         public DataTable ExecuteQuery(string query)
         {

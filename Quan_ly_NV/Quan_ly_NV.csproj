@@ -50,7 +50,7 @@
     <Compile Include="BLL\ProjectBLL.cs" />
     <Compile Include="BLL\EmployeeBLL.cs" />
     <Compile Include="BLL\AssignTaskBLL.cs" />
-    <Compile Include="BLL\PhongBanBLL.cs" />
+    <Compile Include="BLL\DepartmentBLL.cs" />
     <Compile Include="BLL\RoleBLL.cs" />
     <Compile Include="DAL\DataHelper.cs" />
     <Compile Include="DAL\ProjectDAL.cs" />
@@ -61,7 +61,8 @@
     <Compile Include="DTO\ProjectDTO.cs" />
     <Compile Include="DTO\NhanVienDTO.cs" />
     <Compile Include="DTO\AssignTaskDTO.cs" />
-    <Compile Include="DTO\PhongBanDTO.cs" />
+    <Compile Include="DTO\EmployeeDTO.cs" />
+    <Compile Include="DTO\DepartmentDTO.cs" />
     <Compile Include="DTO\RoleDTO.cs" />
     <Compile Include="GUI\frm_admin.cs">
       <SubType>Form</SubType>

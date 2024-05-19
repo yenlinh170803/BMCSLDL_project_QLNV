@@ -17,16 +17,16 @@ namespace Quan_ly_NV.DAL
             _helper = new DataHelper();
         }
 
-        public List<PhongBanDTO> GetAllDepartments()
+        public List<DepartmentDTO> GetAllDepartments()
         {
             // Implement logic to retrieve department data and map to PhongBanDTO objects
             // Example: Execute a query to fetch all departments and populate the list
             DataTable departmentTable = _helper.ExecuteQuery("SELECT * FROM PHONGBAN");
 
-            List<PhongBanDTO> departments = new List<PhongBanDTO>();
+            List<DepartmentDTO> departments = new List<DepartmentDTO>();
             foreach (DataRow row in departmentTable.Rows)
             {
-                departments.Add(new PhongBanDTO
+                departments.Add(new DepartmentDTO
                 {
                     MaPB = row["MAPB"].ToString(),
                     TenPB = row["TENPB"].ToString(),

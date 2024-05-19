@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Quan_ly_NV.DAL
 {
@@ -53,6 +54,47 @@ namespace Quan_ly_NV.DAL
                 }
             }
             return roleDTOs;
+        }
+        public bool CreateRole(RoleDTO roleDTO)
+        {
+            string query_1 = string.Format("SELECT * FROM VAITRO WHERE TENVT=N'{0}'", roleDTO.RoleName);
+            DataTable role = new DataTable();
+            role = _helper.ExecuteQuery(query_1);
+            if (role.Rows.Count == 0)
+            {
+                int n = _helper.ExecuteQuery("SELECT * FROM VAITRO").Rows.Count;
+                if (n < 10)
+                {
+                    roleDTO.RoleId = "VT0" + (n+1).ToString();
+                }
+                else
+                {
+                    roleDTO.RoleId = "VT" + (n+1).ToString();
+                }
+                string query_2 = string.Format("INSERT VAITRO(MAVT, TENVT) VALUES ('{0}', N'{1}')", roleDTO.RoleId, roleDTO.RoleName);
+                try
+                {
+                    _helper.ExecuteNonQuery(query_2);
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                }
+            }
+            return false;
+        }
+        public DataTable GetAllPermission()
+        {
+            string query = "SELECT USER_NAME(dp.grantee_principal_id) AS [Grantee], " +
+                "dp.class_desc AS [Object name], " +
+                "CASE WHEN dp.minor_id = 0 THEN NULL ELSE COL_NAME(dp.major_id, dp.minor_id) END AS [Column], " +
+                "CASE WHEN dp.state_desc = 'GRANT_WITH_GRANT_OPTION' THEN 'YES' ELSE 'NO' END AS [Grantable], " +
+                "dp.permission_name AS [Type]FROM sys.database_permissions dp " +
+                "WHERE dp.class_desc NOT LIKE 'OBJECT_OR_COLUMN' AND (USER_NAME(dp.grantee_principal_id) NOT LIKE 'NV%' AND USER_NAME(dp.grantee_principal_id) <> 'public');";
+            DataTable permisionTable = new DataTable();
+            permisionTable = _helper.ExecuteQuery(query);
+            return permisionTable;
         }
     }
 }
