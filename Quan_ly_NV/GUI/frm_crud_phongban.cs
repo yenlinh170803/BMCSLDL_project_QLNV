@@ -67,5 +67,10 @@ namespace Quan_ly_NV
             // Call the UpdateDepartment function from PhongBanBLL
             _phongBanBLL.UpdateDepartment(maPBToUpdate, updatedTenPB, updatedMaTrgPhg);
         }
+
+        private void frm_crud_phongban_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

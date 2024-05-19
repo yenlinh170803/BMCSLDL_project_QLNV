@@ -87,11 +87,13 @@ namespace Quan_ly_NV.DAL
         public DataTable GetAllPermission()
         {
             string query = "SELECT USER_NAME(dp.grantee_principal_id) AS [Grantee], " +
-                "dp.class_desc AS [Object name], " +
+                "CASE WHEN dp.class = 0 THEN DB_NAME() ELSE o.name END AS [Object name], " +
                 "CASE WHEN dp.minor_id = 0 THEN NULL ELSE COL_NAME(dp.major_id, dp.minor_id) END AS [Column], " +
                 "CASE WHEN dp.state_desc = 'GRANT_WITH_GRANT_OPTION' THEN 'YES' ELSE 'NO' END AS [Grantable], " +
-                "dp.permission_name AS [Type]FROM sys.database_permissions dp " +
-                "WHERE dp.class_desc NOT LIKE 'OBJECT_OR_COLUMN' AND (USER_NAME(dp.grantee_principal_id) NOT LIKE 'NV%' AND USER_NAME(dp.grantee_principal_id) <> 'public');";
+                "dp.permission_name AS [Type] " +
+                "FROM sys.database_permissions dp " +
+                "LEFT JOIN sys.objects o ON dp.major_id = o.object_id AND dp.class = 1 " +
+                "WHERE USER_NAME(dp.grantee_principal_id) NOT LIKE 'NV%' AND USER_NAME(dp.grantee_principal_id) <> 'public'";
             DataTable permisionTable = new DataTable();
             permisionTable = _helper.ExecuteQuery(query);
             return permisionTable;
